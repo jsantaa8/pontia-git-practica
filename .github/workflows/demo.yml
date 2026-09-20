@@ -2,12 +2,13 @@ name: Workflow Manual
 on:
   workflow_dispatch:
     inputs:
-      texto:
-        description: 'Introduzca un mensaje de texto'
+      nombre:
+        description: 'Tu nombre'
         required: true
+        default: 'Alumno'
 jobs:
   saludo:
     runs-on: ubuntu-latest
     steps:
-      - name: Input de texto
-        run: echo "El mensaje introducido por el usuario es: ${{ inputs.texto }}!"
+      - name: Saludo personalizado
+        run: echo "Hola, ${{ github.event.inputs.nombre }}!"
