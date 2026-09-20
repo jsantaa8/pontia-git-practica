@@ -10,4 +10,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Input de texto
-        run: echo "El mensaje introducido por el usuario es: ${{ github.event.inputs.texto }}!"
+        run: echo "El mensaje introducido por el usuario es: ${{ inputs.texto }}!"
